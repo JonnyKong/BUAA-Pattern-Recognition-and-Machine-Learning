@@ -1,0 +1,61 @@
+digraph G {
+
+        rankdir=LR
+	splines=line
+        nodesep=.05;
+      
+        
+        subgraph cluster_0 {
+		color=green;
+                node [style=solid,color=blue4, shape=circle, label = ""];
+		x1 x2 x3 x4;
+		label = "4";
+	}
+
+	subgraph cluster_1 {
+		color=green;
+		node [style=solid,color=red2, shape=circle, label = ""];
+		a1 a2 a3;
+		label = "3";
+	}
+
+	subgraph cluster_2 {
+		color=green;
+		node [style=solid,color=seagreen2, shape=circle, label = ""];
+		O1 O2 O3 O4;
+		label="4";
+	}
+
+        x1 -> a1;
+        x1 -> a2;
+        x1 -> a3;
+
+        x2 -> a1;
+        x2 -> a2;
+        x2 -> a3;
+ 
+        x3 -> a1;
+        x3 -> a2;
+        x3 -> a3;
+
+	x4 -> a1;
+        x4 -> a2;
+        x4 -> a3;
+
+        a1 -> O1
+        a2 -> O1
+        a3 -> O1
+
+        a1 -> O2
+        a2 -> O2
+        a3 -> O2
+
+        a1 -> O3
+        a2 -> O3
+        a3 -> O3
+
+	a1 -> O4
+        a2 -> O4
+        a3 -> O4
+	
+}
